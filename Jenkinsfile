@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                git branch: 'main', url: 'https://github.com/parsh1002/MyMavenApp.git'
                 sh 'mvn clean package'
             }
         }
